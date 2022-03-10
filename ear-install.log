@@ -1,0 +1,738 @@
+Rocky Linux 8 - AppStream                        21 kB/s | 4.8 kB     00:00    
+Rocky Linux 8 - BaseOS                           16 kB/s | 4.3 kB     00:00    
+Rocky Linux 8 - Extras                           16 kB/s | 3.5 kB     00:00    
+Metadata cache created.
+Last metadata expiration check: 0:00:01 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Dependencies resolved.
+================================================================================
+ Package           Architecture     Version             Repository         Size
+================================================================================
+Installing Groups:
+ Development Tools                                                             
+
+Transaction Summary
+================================================================================
+
+Complete!
+Last metadata expiration check: 0:00:03 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Package papi-5.6.0-14.el8.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 0:00:05 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Package gsl-2.5-1.el8.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 0:00:06 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Package kernel-tools-4.18.0-348.12.2.el8_5.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 0:00:08 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Package freeipmi-1.6.8-1.el8.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 0:00:09 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Package openmpi-4.1.1-2.el8.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 0:00:10 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Package mariadb-3:10.3.28-1.module+el8.4.0+427+adf35707.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+Last metadata expiration check: 0:00:12 ago on Wed 09 Mar 2022 03:10:15 PM CET.
+Package mariadb-devel-3:10.3.28-1.module+el8.4.0+427+adf35707.x86_64 is already installed.
+Dependencies resolved.
+Nothing to do.
+Complete!
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for gawk... gawk
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for GSL root directory... 
+checking for GSL compiler link... no
+checking for SLURM root directory... 
+checking for SLURM compiler link... no
+checking for PostgreSQL root directory... 
+checking for PostgreSQL compiler link... no
+checking for MySQL root directory... /usr
+checking for MySQL compiler link... yes
+checking for MySQL CPPFLAGS...
+checking for MySQL LDFLAGS... -L/usr/lib64
+checking for MySQL libraries... -lmysqlclient
+checking for CUDA root directory... 
+checking for CUDA CPPFLAGS... no
+---------------------------------------Checking summary --
+checking GSL dependancy found... no
+checking SLURM dependancy found... no
+checking Database dependancy found (mysql)... yes
+----------------------------------------------------------
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating etc/module/ear
+config.status: creating etc/slurm/ear.plugstack.conf
+config.status: creating etc/systemd/eard.service
+config.status: creating etc/systemd/eardbd.service
+config.status: creating etc/systemd/eargmd.service
+config.status: creating src/common/config/config_install.h
+config.status: creating src/common/config/config_dev.h
+config.status: creating src/common/config/config_def.h
+config.status: creating src/common/config/config_env.h
+config.status: creating etc/conf/ear.conf.full.template
+config.status: creating etc/conf/ear.conf.template
+config.status: creating etc/rpms/specs/ear.spec
+config.status: creating etc/rpms/rpmbuild.sh
+make[1]: Entering directory '/root/ear/src'
+====================================
+= Compiling common
+====================================
+make[2]: Entering directory '/root/ear/src/common'
+make[3]: Entering directory '/root/ear/src/common/config'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/ear/src/common/config'
+make[3]: Entering directory '/root/ear/src/common/database'
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -Wall -Wextra  -c mysql_io_functions.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -Wall -Wextra  -c postgresql_io_functions.c
+make[3]: Leaving directory '/root/ear/src/common/database'
+make[3]: Entering directory '/root/ear/src/common/hardware'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/ear/src/common/hardware'
+make[3]: Entering directory '/root/ear/src/common/messaging'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/ear/src/common/messaging'
+make[3]: Entering directory '/root/ear/src/common/system'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/ear/src/common/system'
+make[3]: Entering directory '/root/ear/src/common/types'
+make[4]: Entering directory '/root/ear/src/common/types/configuration'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/root/ear/src/common/types/configuration'
+make[3]: Leaving directory '/root/ear/src/common/types'
+make[3]: Entering directory '/root/ear/src/common/utils'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/root/ear/src/common/utils'
+ar rvs libcommon.a /root/ear/src/common/environment.o /root/ear/src/common/environment_common.o /root/ear/src/common/math_operations.o /root/ear/src/common/string_enhanced.o /root/ear/src/common/system/folder.o /root/ear/src/common/system/symplug.o /root/ear/src/common/system/user.o /root/ear/src/common/system/sockets.o /root/ear/src/common/system/execute.o /root/ear/src/common/system/monitor.o /root/ear/src/common/system/random.o /root/ear/src/common/system/shared_areas.o /root/ear/src/common/system/process.o /root/ear/src/common/system/file.o /root/ear/src/common/system/time.o /root/ear/src/common/system/loadavg.o /root/ear/src/common/database/mysql_io_functions.o /root/ear/src/common/database/postgresql_io_functions.o /root/ear/src/common/database/db_helper.o /root/ear/src/common/types/loop.o /root/ear/src/common/types/log.o /root/ear/src/common/types/periodic_metric.o /root/ear/src/common/types/application.o /root/ear/src/common/types/configuration/cluster_conf_db.o /root/ear/src/common/types/configuration/cluster_conf.o /root/ear/src/common/types/configuration/policy_conf.o /root/ear/src/common/types/configuration/cluster_conf_eard.o /root/ear/src/common/types/configuration/cluster_conf_earlib.o /root/ear/src/common/types/configuration/cluster_conf_eardbd.o /root/ear/src/common/types/configuration/node_conf.o /root/ear/src/common/types/configuration/cluster_conf_read.o /root/ear/src/common/types/configuration/cluster_conf_eargm.o /root/ear/src/common/types/configuration/cluster_conf_etag.o /root/ear/src/common/types/configuration/cluster_conf_verbose.o /root/ear/src/common/types/configuration/cluster_conf_tag.o /root/ear/src/common/types/configuration/cluster_conf_generic.o /root/ear/src/common/types/gm_warning.o /root/ear/src/common/types/log_eard.o /root/ear/src/common/types/risk.o /root/ear/src/common/types/projection.o /root/ear/src/common/types/coefficient.o /root/ear/src/common/types/job.o /root/ear/src/common/types/power_signature.o /root/ear/src/common/types/version.o /root/ear/src/common/types/signature.o /root/ear/src/common/types/daemon_log.o /root/ear/src/common/types/periodic_aggregation.o /root/ear/src/common/types/services.o /root/ear/src/common/types/pc_app_info.o /root/ear/src/common/hardware/bithack.o /root/ear/src/common/hardware/hardware_info.o /root/ear/src/common/hardware/cpuid.o /root/ear/src/common/hardware/topology.o /root/ear/src/common/hardware/architecture.o /root/ear/src/common/messaging/msg_internals.o /root/ear/src/common/utils/string.o
+a - /root/ear/src/common/environment.o
+a - /root/ear/src/common/environment_common.o
+a - /root/ear/src/common/math_operations.o
+a - /root/ear/src/common/string_enhanced.o
+a - /root/ear/src/common/system/folder.o
+a - /root/ear/src/common/system/symplug.o
+a - /root/ear/src/common/system/user.o
+a - /root/ear/src/common/system/sockets.o
+a - /root/ear/src/common/system/execute.o
+a - /root/ear/src/common/system/monitor.o
+a - /root/ear/src/common/system/random.o
+a - /root/ear/src/common/system/shared_areas.o
+a - /root/ear/src/common/system/process.o
+a - /root/ear/src/common/system/file.o
+a - /root/ear/src/common/system/time.o
+a - /root/ear/src/common/system/loadavg.o
+a - /root/ear/src/common/database/mysql_io_functions.o
+a - /root/ear/src/common/database/postgresql_io_functions.o
+a - /root/ear/src/common/database/db_helper.o
+a - /root/ear/src/common/types/loop.o
+a - /root/ear/src/common/types/log.o
+a - /root/ear/src/common/types/periodic_metric.o
+a - /root/ear/src/common/types/application.o
+a - /root/ear/src/common/types/configuration/cluster_conf_db.o
+a - /root/ear/src/common/types/configuration/cluster_conf.o
+a - /root/ear/src/common/types/configuration/policy_conf.o
+a - /root/ear/src/common/types/configuration/cluster_conf_eard.o
+a - /root/ear/src/common/types/configuration/cluster_conf_earlib.o
+a - /root/ear/src/common/types/configuration/cluster_conf_eardbd.o
+a - /root/ear/src/common/types/configuration/node_conf.o
+a - /root/ear/src/common/types/configuration/cluster_conf_read.o
+a - /root/ear/src/common/types/configuration/cluster_conf_eargm.o
+a - /root/ear/src/common/types/configuration/cluster_conf_etag.o
+a - /root/ear/src/common/types/configuration/cluster_conf_verbose.o
+a - /root/ear/src/common/types/configuration/cluster_conf_tag.o
+a - /root/ear/src/common/types/configuration/cluster_conf_generic.o
+a - /root/ear/src/common/types/gm_warning.o
+a - /root/ear/src/common/types/log_eard.o
+a - /root/ear/src/common/types/risk.o
+a - /root/ear/src/common/types/projection.o
+a - /root/ear/src/common/types/coefficient.o
+a - /root/ear/src/common/types/job.o
+a - /root/ear/src/common/types/power_signature.o
+a - /root/ear/src/common/types/version.o
+a - /root/ear/src/common/types/signature.o
+a - /root/ear/src/common/types/daemon_log.o
+a - /root/ear/src/common/types/periodic_aggregation.o
+a - /root/ear/src/common/types/services.o
+a - /root/ear/src/common/types/pc_app_info.o
+a - /root/ear/src/common/hardware/bithack.o
+a - /root/ear/src/common/hardware/hardware_info.o
+a - /root/ear/src/common/hardware/cpuid.o
+a - /root/ear/src/common/hardware/topology.o
+a - /root/ear/src/common/hardware/architecture.o
+a - /root/ear/src/common/messaging/msg_internals.o
+a - /root/ear/src/common/utils/string.o
+make[2]: Leaving directory '/root/ear/src/common'
+====================================
+= Compiling report
+====================================
+make[2]: Entering directory '/root/ear/src/report'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -c report.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -shared -o eard.so eard.c 
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -shared -o csv.so csv.c 
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -shared -o csv_ts.so csv_ts.c 
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -shared -o plug_dummy.so plug_dummy.c 
+make[2]: Leaving directory '/root/ear/src/report'
+====================================
+= Compiling metrics
+====================================
+make[2]: Entering directory '/root/ear/src/metrics'
+make[3]: Entering directory '/root/ear/src/metrics/accumulators'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c power_metrics.c
+make[3]: Leaving directory '/root/ear/src/metrics/accumulators'
+make[3]: Entering directory '/root/ear/src/metrics/bandwidth'
+make[4]: Entering directory '/root/ear/src/metrics/bandwidth/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c amd49.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c intel63.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c dummy.c
+make[4]: Leaving directory '/root/ear/src/metrics/bandwidth/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c bandwidth.c
+make[3]: Leaving directory '/root/ear/src/metrics/bandwidth'
+make[3]: Entering directory '/root/ear/src/metrics/cache'
+make[4]: Entering directory '/root/ear/src/metrics/cache/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c perf.c
+make[4]: Leaving directory '/root/ear/src/metrics/cache/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c cache.c
+make[3]: Leaving directory '/root/ear/src/metrics/cache'
+make[3]: Entering directory '/root/ear/src/metrics/common'
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c apis.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c pstate.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c hsmp.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c hwmon.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c msr.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c omsr.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c pci.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001  -c perf.c
+make[3]: Leaving directory '/root/ear/src/metrics/common'
+make[3]: Entering directory '/root/ear/src/metrics/cpi'
+make[4]: Entering directory '/root/ear/src/metrics/cpi/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c intel63.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c dummy.c
+make[4]: Leaving directory '/root/ear/src/metrics/cpi/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c cpi.c
+make[3]: Leaving directory '/root/ear/src/metrics/cpi'
+make[3]: Entering directory '/root/ear/src/metrics/energy'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c cpu.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c energy_node.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c energy_node_lib.c
+make[4]: Entering directory '/root/ear/src/metrics/energy/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c intel63.c
+make[4]: Leaving directory '/root/ear/src/metrics/energy/cpu'
+make[4]: Entering directory '/root/ear/src/metrics/energy/node'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c energy_nm.c
+/usr/bin/gcc   -I/root/ear/src -fPIC -shared energy_nm.o -o energy_nm.so /root/ear/src/common/libcommon.a 
+/usr/bin/gcc  -I/root/ear/src -fPIC -c energy_rapl.c
+/usr/bin/gcc   -I/root/ear/src -fPIC -shared energy_rapl.o -o energy_rapl.so /root/ear/src/metrics/common/omsr.o /root/ear/src/metrics/energy/cpu/intel63.o /root/ear/src/common/libcommon.a -lm 
+/usr/bin/gcc  -I/root/ear/src -fPIC -c energy_dcmi.c
+/usr/bin/gcc   -I/root/ear/src -fPIC -shared energy_dcmi.o -o energy_dcmi.so /root/ear/src/common/libcommon.a 
+/usr/bin/gcc  -I/root/ear/src -fPIC -c energy_sd650.c
+/usr/bin/gcc   -I/root/ear/src -fPIC -shared energy_sd650.o -o energy_sd650.so /root/ear/src/common/libcommon.a 
+/usr/bin/gcc  -I/root/ear/src -fPIC -c energy_inm_power.c
+/usr/bin/gcc   -I/root/ear/src -fPIC -shared energy_inm_power.o -o energy_inm_power.so /root/ear/src/common/libcommon.a 
+rm energy_dcmi.o energy_sd650.o energy_inm_power.o energy_nm.o
+make[4]: Leaving directory '/root/ear/src/metrics/energy/node'
+make[3]: Leaving directory '/root/ear/src/metrics/energy'
+make[3]: Entering directory '/root/ear/src/metrics/flops'
+make[4]: Entering directory '/root/ear/src/metrics/flops/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c amd49.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c intel63.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c dummy.c
+make[4]: Leaving directory '/root/ear/src/metrics/flops/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c flops.c
+make[3]: Leaving directory '/root/ear/src/metrics/flops'
+make[3]: Entering directory '/root/ear/src/metrics/frequency'
+make[4]: Entering directory '/root/ear/src/metrics/frequency/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c intel63.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c intel_dummy.c
+make[4]: Leaving directory '/root/ear/src/metrics/frequency/cpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c cpu.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c cpufreq_base.c
+make[3]: Leaving directory '/root/ear/src/metrics/frequency'
+make[3]: Entering directory '/root/ear/src/metrics/gpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC  -c gpu.c
+make[4]: Entering directory '/root/ear/src/metrics/gpu/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c dummy.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -I/include  -c nvml.c
+make[4]: Leaving directory '/root/ear/src/metrics/gpu/archs'
+make[3]: Leaving directory '/root/ear/src/metrics/gpu'
+make[3]: Entering directory '/root/ear/src/metrics/imcfreq'
+make[4]: Entering directory '/root/ear/src/metrics/imcfreq/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -c amd17.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -c intel63.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -c dummy.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -c eard.c
+make[4]: Leaving directory '/root/ear/src/metrics/imcfreq/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -c imcfreq.c
+make[3]: Leaving directory '/root/ear/src/metrics/imcfreq'
+make[3]: Entering directory '/root/ear/src/metrics/io'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c io.c
+make[3]: Leaving directory '/root/ear/src/metrics/io'
+make[3]: Entering directory '/root/ear/src/metrics/proc'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c stat.c
+make[3]: Leaving directory '/root/ear/src/metrics/proc'
+make[3]: Entering directory '/root/ear/src/metrics/temperature'
+make[4]: Entering directory '/root/ear/src/metrics/temperature/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c amd17.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c intel63.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -c dummy.c
+make[4]: Leaving directory '/root/ear/src/metrics/temperature/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c temperature.c
+make[3]: Leaving directory '/root/ear/src/metrics/temperature'
+ar rvs libmetrics.a /root/ear/src/metrics/common/apis.o /root/ear/src/metrics/common/hsmp.o /root/ear/src/metrics/common/hwmon.o /root/ear/src/metrics/common/pci.o /root/ear/src/metrics/common/pstate.o /root/ear/src/metrics/common/msr.o /root/ear/src/metrics/common/omsr.o /root/ear/src/metrics/common/perf.o /root/ear/src/metrics/accumulators/power_metrics.o /root/ear/src/metrics/bandwidth/bandwidth.o /root/ear/src/metrics/bandwidth/cpu/amd49.o /root/ear/src/metrics/bandwidth/cpu/intel63.o /root/ear/src/metrics/bandwidth/cpu/dummy.o /root/ear/src/metrics/cache/cache.o /root/ear/src/metrics/cache/cpu/perf.o /root/ear/src/metrics/cpi/cpi.o /root/ear/src/metrics/cpi/cpu/intel63.o /root/ear/src/metrics/cpi/cpu/dummy.o /root/ear/src/metrics/energy/cpu.o /root/ear/src/metrics/energy/energy_node.o /root/ear/src/metrics/energy/energy_node_lib.o /root/ear/src/metrics/energy/cpu/intel63.o /root/ear/src/metrics/flops/flops.o /root/ear/src/metrics/flops/cpu/amd49.o /root/ear/src/metrics/flops/cpu/intel63.o /root/ear/src/metrics/flops/cpu/dummy.o /root/ear/src/metrics/frequency/cpu.o /root/ear/src/metrics/frequency/cpufreq_base.o /root/ear/src/metrics/frequency/cpu/intel63.o /root/ear/src/metrics/frequency/cpu/intel_dummy.o /root/ear/src/metrics/imcfreq/imcfreq.o /root/ear/src/metrics/imcfreq/archs/amd17.o /root/ear/src/metrics/imcfreq/archs/eard.o /root/ear/src/metrics/imcfreq/archs/dummy.o /root/ear/src/metrics/imcfreq/archs/intel63.o /root/ear/src/metrics/proc/stat.o /root/ear/src/metrics/gpu/gpu.o /root/ear/src/metrics/gpu/archs/nvml.o /root/ear/src/metrics/gpu/archs/dummy.o /root/ear/src/metrics/temperature/temperature.o /root/ear/src/metrics/temperature/archs/amd17.o /root/ear/src/metrics/temperature/archs/intel63.o /root/ear/src/metrics/temperature/archs/dummy.o /root/ear/src/metrics/io/io.o
+a - /root/ear/src/metrics/common/apis.o
+a - /root/ear/src/metrics/common/hsmp.o
+a - /root/ear/src/metrics/common/hwmon.o
+a - /root/ear/src/metrics/common/pci.o
+a - /root/ear/src/metrics/common/pstate.o
+a - /root/ear/src/metrics/common/msr.o
+a - /root/ear/src/metrics/common/omsr.o
+a - /root/ear/src/metrics/common/perf.o
+a - /root/ear/src/metrics/accumulators/power_metrics.o
+a - /root/ear/src/metrics/bandwidth/bandwidth.o
+a - /root/ear/src/metrics/bandwidth/cpu/amd49.o
+a - /root/ear/src/metrics/bandwidth/cpu/intel63.o
+a - /root/ear/src/metrics/bandwidth/cpu/dummy.o
+a - /root/ear/src/metrics/cache/cache.o
+a - /root/ear/src/metrics/cache/cpu/perf.o
+a - /root/ear/src/metrics/cpi/cpi.o
+a - /root/ear/src/metrics/cpi/cpu/intel63.o
+a - /root/ear/src/metrics/cpi/cpu/dummy.o
+a - /root/ear/src/metrics/energy/cpu.o
+a - /root/ear/src/metrics/energy/energy_node.o
+a - /root/ear/src/metrics/energy/energy_node_lib.o
+a - /root/ear/src/metrics/energy/cpu/intel63.o
+a - /root/ear/src/metrics/flops/flops.o
+a - /root/ear/src/metrics/flops/cpu/amd49.o
+a - /root/ear/src/metrics/flops/cpu/intel63.o
+a - /root/ear/src/metrics/flops/cpu/dummy.o
+a - /root/ear/src/metrics/frequency/cpu.o
+a - /root/ear/src/metrics/frequency/cpufreq_base.o
+a - /root/ear/src/metrics/frequency/cpu/intel63.o
+a - /root/ear/src/metrics/frequency/cpu/intel_dummy.o
+a - /root/ear/src/metrics/imcfreq/imcfreq.o
+a - /root/ear/src/metrics/imcfreq/archs/amd17.o
+a - /root/ear/src/metrics/imcfreq/archs/eard.o
+a - /root/ear/src/metrics/imcfreq/archs/dummy.o
+a - /root/ear/src/metrics/imcfreq/archs/intel63.o
+a - /root/ear/src/metrics/proc/stat.o
+a - /root/ear/src/metrics/gpu/gpu.o
+a - /root/ear/src/metrics/gpu/archs/nvml.o
+a - /root/ear/src/metrics/gpu/archs/dummy.o
+a - /root/ear/src/metrics/temperature/temperature.o
+a - /root/ear/src/metrics/temperature/archs/amd17.o
+a - /root/ear/src/metrics/temperature/archs/intel63.o
+a - /root/ear/src/metrics/temperature/archs/dummy.o
+a - /root/ear/src/metrics/io/io.o
+/usr/bin/gcc  -fPIC -shared -O2 -Wextra -o libmetrics.so /root/ear/src/metrics/common/apis.o /root/ear/src/metrics/common/hsmp.o /root/ear/src/metrics/common/hwmon.o /root/ear/src/metrics/common/pci.o /root/ear/src/metrics/common/pstate.o /root/ear/src/metrics/common/msr.o /root/ear/src/metrics/common/omsr.o /root/ear/src/metrics/common/perf.o /root/ear/src/metrics/accumulators/power_metrics.o /root/ear/src/metrics/bandwidth/bandwidth.o /root/ear/src/metrics/bandwidth/cpu/amd49.o /root/ear/src/metrics/bandwidth/cpu/intel63.o /root/ear/src/metrics/bandwidth/cpu/dummy.o /root/ear/src/metrics/cache/cache.o /root/ear/src/metrics/cache/cpu/perf.o /root/ear/src/metrics/cpi/cpi.o /root/ear/src/metrics/cpi/cpu/intel63.o /root/ear/src/metrics/cpi/cpu/dummy.o /root/ear/src/metrics/energy/cpu.o /root/ear/src/metrics/energy/energy_node.o /root/ear/src/metrics/energy/energy_node_lib.o /root/ear/src/metrics/energy/cpu/intel63.o /root/ear/src/metrics/flops/flops.o /root/ear/src/metrics/flops/cpu/amd49.o /root/ear/src/metrics/flops/cpu/intel63.o /root/ear/src/metrics/flops/cpu/dummy.o /root/ear/src/metrics/frequency/cpu.o /root/ear/src/metrics/frequency/cpufreq_base.o /root/ear/src/metrics/frequency/cpu/intel63.o /root/ear/src/metrics/frequency/cpu/intel_dummy.o /root/ear/src/metrics/imcfreq/imcfreq.o /root/ear/src/metrics/imcfreq/archs/amd17.o /root/ear/src/metrics/imcfreq/archs/eard.o /root/ear/src/metrics/imcfreq/archs/dummy.o /root/ear/src/metrics/imcfreq/archs/intel63.o /root/ear/src/metrics/proc/stat.o /root/ear/src/metrics/gpu/gpu.o /root/ear/src/metrics/gpu/archs/nvml.o /root/ear/src/metrics/gpu/archs/dummy.o /root/ear/src/metrics/temperature/temperature.o /root/ear/src/metrics/temperature/archs/amd17.o /root/ear/src/metrics/temperature/archs/intel63.o /root/ear/src/metrics/temperature/archs/dummy.o /root/ear/src/metrics/io/io.o
+make[2]: Leaving directory '/root/ear/src/metrics'
+====================================
+= Compiling management
+====================================
+make[2]: Entering directory '/root/ear/src/management'
+make[3]: Entering directory '/root/ear/src/management/cpufreq'
+make[4]: Entering directory '/root/ear/src/management/cpufreq/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall  -c amd17.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall  -c default.c
+make[4]: Leaving directory '/root/ear/src/management/cpufreq/archs'
+make[4]: Entering directory '/root/ear/src/management/cpufreq/drivers'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -g -c linux_cpufreq.c
+make[4]: Leaving directory '/root/ear/src/management/cpufreq/drivers'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c cpufreq.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c frequency.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c governor.c
+make[3]: Leaving directory '/root/ear/src/management/cpufreq'
+make[3]: Entering directory '/root/ear/src/management/imcfreq'
+make[4]: Entering directory '/root/ear/src/management/imcfreq/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c intel63.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c amd17.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c dummy.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c eard.c
+make[4]: Leaving directory '/root/ear/src/management/imcfreq/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c imcfreq.c
+make[3]: Leaving directory '/root/ear/src/management/imcfreq'
+make[3]: Entering directory '/root/ear/src/management/gpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall  -c gpu.c
+make[4]: Entering directory '/root/ear/src/management/gpu/archs'
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -c dummy.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -Wall -I/include  -c nvml.c
+make[4]: Leaving directory '/root/ear/src/management/gpu/archs'
+make[3]: Leaving directory '/root/ear/src/management/gpu'
+ar rvs libmgt.a /root/ear/src/management/cpufreq/cpufreq.o /root/ear/src/management/cpufreq/governor.o /root/ear/src/management/cpufreq/frequency.o /root/ear/src/management/cpufreq/archs/amd17.o /root/ear/src/management/cpufreq/archs/default.o /root/ear/src/management/cpufreq/drivers/linux_cpufreq.o /root/ear/src/management/imcfreq/imcfreq.o /root/ear/src/management/imcfreq/archs/amd17.o /root/ear/src/management/imcfreq/archs/dummy.o /root/ear/src/management/imcfreq/archs/eard.o /root/ear/src/management/imcfreq/archs/intel63.o /root/ear/src/management/gpu/gpu.o /root/ear/src/management/gpu/archs/nvml.o /root/ear/src/management/gpu/archs/dummy.o
+a - /root/ear/src/management/cpufreq/cpufreq.o
+a - /root/ear/src/management/cpufreq/governor.o
+a - /root/ear/src/management/cpufreq/frequency.o
+a - /root/ear/src/management/cpufreq/archs/amd17.o
+a - /root/ear/src/management/cpufreq/archs/default.o
+a - /root/ear/src/management/cpufreq/drivers/linux_cpufreq.o
+a - /root/ear/src/management/imcfreq/imcfreq.o
+a - /root/ear/src/management/imcfreq/archs/amd17.o
+a - /root/ear/src/management/imcfreq/archs/dummy.o
+a - /root/ear/src/management/imcfreq/archs/eard.o
+a - /root/ear/src/management/imcfreq/archs/intel63.o
+a - /root/ear/src/management/gpu/gpu.o
+a - /root/ear/src/management/gpu/archs/nvml.o
+a - /root/ear/src/management/gpu/archs/dummy.o
+make[2]: Leaving directory '/root/ear/src/management'
+====================================
+= Compiling daemon
+====================================
+make[2]: Entering directory '/root/ear/src/daemon'
+make[3]: Entering directory '/root/ear/src/daemon/app_api'
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001 -c app_server_api.c
+/usr/bin/gcc  -fPIC -I/root/ear/src -DSEC_KEY=10001	-c app_api.c
+ar rcs libear_api.a app_api.o
+make[3]: Leaving directory '/root/ear/src/daemon/app_api'
+make[3]: Entering directory '/root/ear/src/daemon/remote_api'
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001  -Wall -fPIC -c eard_rapi.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001  -Wall -c eard_server_api.c 
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001  -Wall -c dynamic_configuration.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001  -Wall -c dyn_conf_theading.c
+make[3]: Leaving directory '/root/ear/src/daemon/remote_api'
+make[3]: Entering directory '/root/ear/src/daemon/local_api'
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001  -fPIC -c eard_api.c
+make[3]: Leaving directory '/root/ear/src/daemon/local_api'
+make[3]: Entering directory '/root/ear/src/daemon/powercap'
+/usr/bin/gcc  -I/root/ear/src -fPIC -DSEC_KEY=10001 -Wall -fPIC -c powercap_status.c 
+/usr/bin/gcc  -I/root/ear/src -fPIC -DSEC_KEY=10001 -Wall -c powercap_mgt.c 
+/usr/bin/gcc  -I/root/ear/src -fPIC -DSEC_KEY=10001 -Wall -c powercap.c
+/usr/bin/gcc  -I/root/ear/src -fPIC -DSEC_KEY=10001 -Wall -c inm.c
+/usr/bin/gcc   -I/root/ear/src -fPIC -DSEC_KEY=10001 -Wall -shared inm.o -o inm.so /root/ear/src/common/libcommon.a
+/usr/bin/gcc  -I/root/ear/src -fPIC -DSEC_KEY=10001 -Wall -c dvfs.c
+/usr/bin/gcc   -I/root/ear/src -fPIC -DSEC_KEY=10001 -Wall -shared dvfs.o -o dvfs.so 
+make[3]: Leaving directory '/root/ear/src/daemon/powercap'
+make[3]: Entering directory '/root/ear/src/daemon/gpu'
+/usr/bin/gcc  -I/root/ear/src -fPIC -c gpu_mgt.c
+make[3]: Leaving directory '/root/ear/src/daemon/gpu'
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001 -Wall -c eard_checkpoint.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001 -Wall -c power_monitor.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001 -Wall   -c -o app_mgt.o app_mgt.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001 -Wall -fPIC -c shared_configuration.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001 -Wall -c node_metrics.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001 -Wall   -c -o /root/ear/src/database_cache/eardbd_api.o /root/ear/src/database_cache/eardbd_api.c
+/usr/bin/gcc  -I/root/ear/src -DSEC_KEY=10001 -Wall  -o eard eard.c eard_checkpoint.o power_monitor.o app_mgt.o shared_configuration.o app_api/app_server_api.o node_metrics.o  remote_api/eard_server_api.o remote_api/dyn_conf_theading.o remote_api/dynamic_configuration.o  powercap/powercap_status.o powercap/powercap_mgt.o powercap/powercap.o  gpu/gpu_mgt.o /root/ear/src/database_cache/eardbd_api.o /root/ear/src/management/libmgt.a /root/ear/src/metrics/libmetrics.a local_api/eard_api.o /root/ear/src/common/libcommon.a -L/usr/lib64 -lmysqlclient -lm -pthread -ldl -rdynamic  -lpthread
+make[2]: Leaving directory '/root/ear/src/daemon'
+====================================
+= Compiling library
+====================================
+make[2]: Entering directory '/root/ear/src/library'
+make[3]: Entering directory '/root/ear/src/library/api'
+/usr/bin/gcc  -I/root/include -DMPI=1 -DNODE_LB=1 -fPIC -O2 -I/root/ear/src  -Wall -c ear.c
+make[3]: Leaving directory '/root/ear/src/library/api'
+make[2]: Leaving directory '/root/ear/src/library'
+make[1]: Leaving directory '/root/ear/src'
+make[1]: Entering directory '/root/ear/etc'
+====================================
+= Installing etc
+====================================
+make[1]: Leaving directory '/root/ear/etc'
+make[1]: Entering directory '/root/ear/src'
+====================================
+= Compiling common
+====================================
+make[2]: Entering directory '/root/ear/src/common'
+make[3]: Entering directory '/root/ear/src/common/config'
+make[3]: Leaving directory '/root/ear/src/common/config'
+make[3]: Entering directory '/root/ear/src/common/database'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/database'
+make[3]: Entering directory '/root/ear/src/common/hardware'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/hardware'
+make[3]: Entering directory '/root/ear/src/common/messaging'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/messaging'
+make[3]: Entering directory '/root/ear/src/common/system'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/system'
+make[3]: Entering directory '/root/ear/src/common/types'
+make[4]: Entering directory '/root/ear/src/common/types/configuration'
+make[4]: Nothing to be done for 'install'.
+make[4]: Leaving directory '/root/ear/src/common/types/configuration'
+make[3]: Leaving directory '/root/ear/src/common/types'
+make[3]: Entering directory '/root/ear/src/common/utils'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/utils'
+make[2]: Leaving directory '/root/ear/src/common'
+====================================
+= Compiling report
+====================================
+make[2]: Entering directory '/root/ear/src/report'
+make[2]: Leaving directory '/root/ear/src/report'
+====================================
+= Compiling metrics
+====================================
+make[2]: Entering directory '/root/ear/src/metrics'
+make[3]: Entering directory '/root/ear/src/metrics/accumulators'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/accumulators'
+make[3]: Entering directory '/root/ear/src/metrics/bandwidth'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/bandwidth'
+make[3]: Entering directory '/root/ear/src/metrics/cache'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/cache'
+make[3]: Entering directory '/root/ear/src/metrics/common'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/common'
+make[3]: Entering directory '/root/ear/src/metrics/cpi'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/cpi'
+make[3]: Entering directory '/root/ear/src/metrics/energy'
+make[4]: Entering directory '/root/ear/src/metrics/energy/cpu'
+make[4]: 'install' is up to date.
+make[4]: Leaving directory '/root/ear/src/metrics/energy/cpu'
+make[4]: Entering directory '/root/ear/src/metrics/energy/node'
+make[4]: Leaving directory '/root/ear/src/metrics/energy/node'
+make[3]: Leaving directory '/root/ear/src/metrics/energy'
+make[3]: Entering directory '/root/ear/src/metrics/flops'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/flops'
+make[3]: Entering directory '/root/ear/src/metrics/frequency'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/frequency'
+make[3]: Entering directory '/root/ear/src/metrics/gpu'
+make[4]: Entering directory '/root/ear/src/metrics/gpu/archs'
+make[4]: 'install' is up to date.
+make[4]: Leaving directory '/root/ear/src/metrics/gpu/archs'
+make[3]: Leaving directory '/root/ear/src/metrics/gpu'
+make[3]: Entering directory '/root/ear/src/metrics/imcfreq'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/imcfreq'
+make[3]: Entering directory '/root/ear/src/metrics/io'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/io'
+make[3]: Entering directory '/root/ear/src/metrics/proc'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/proc'
+make[3]: Entering directory '/root/ear/src/metrics/temperature'
+make[4]: Entering directory '/root/ear/src/metrics/temperature/archs'
+make[4]: 'install' is up to date.
+make[4]: Leaving directory '/root/ear/src/metrics/temperature/archs'
+make[3]: Leaving directory '/root/ear/src/metrics/temperature'
+make[2]: Leaving directory '/root/ear/src/metrics'
+====================================
+= Compiling management
+====================================
+make[2]: Entering directory '/root/ear/src/management'
+make[3]: Entering directory '/root/ear/src/management/cpufreq'
+make[4]: Entering directory '/root/ear/src/management/cpufreq/archs'
+make[4]: 'install' is up to date.
+make[4]: Leaving directory '/root/ear/src/management/cpufreq/archs'
+make[4]: Entering directory '/root/ear/src/management/cpufreq/drivers'
+make[4]: 'install' is up to date.
+make[4]: Leaving directory '/root/ear/src/management/cpufreq/drivers'
+make[3]: Leaving directory '/root/ear/src/management/cpufreq'
+make[3]: Entering directory '/root/ear/src/management/imcfreq'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/management/imcfreq'
+make[3]: Entering directory '/root/ear/src/management/gpu'
+make[4]: Entering directory '/root/ear/src/management/gpu/archs'
+make[4]: 'install' is up to date.
+make[4]: Leaving directory '/root/ear/src/management/gpu/archs'
+make[3]: Leaving directory '/root/ear/src/management/gpu'
+make[2]: Leaving directory '/root/ear/src/management'
+====================================
+= Compiling daemon
+====================================
+make[2]: Entering directory '/root/ear/src/daemon'
+make[3]: Entering directory '/root/ear/src/daemon/app_api'
+make[3]: Leaving directory '/root/ear/src/daemon/app_api'
+make[3]: Entering directory '/root/ear/src/daemon/remote_api'
+make[3]: Nothing to be done for 'install'.
+make[3]: Leaving directory '/root/ear/src/daemon/remote_api'
+make[3]: Entering directory '/root/ear/src/daemon/local_api'
+make[3]: Nothing to be done for 'install'.
+make[3]: Leaving directory '/root/ear/src/daemon/local_api'
+make[3]: Entering directory '/root/ear/src/daemon/powercap'
+make[3]: Leaving directory '/root/ear/src/daemon/powercap'
+make[3]: Entering directory '/root/ear/src/daemon/gpu'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/daemon/gpu'
+make[2]: Leaving directory '/root/ear/src/daemon'
+====================================
+= Compiling library
+====================================
+make[2]: Entering directory '/root/ear/src/library'
+make[3]: Entering directory '/root/ear/src/library/api'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/library/api'
+make[3]: Entering directory '/root/ear/src/library/common'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/library/common'
+make[3]: Entering directory '/root/ear/src/library/dynais'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/library/dynais'
+make[3]: Entering directory '/root/ear/src/library/metrics'
+make[3]: 'install' is up to date.
+make[3]: Leaving directory '/root/ear/src/library/metrics'
+make[3]: Entering directory '/root/ear/src/library/models'
+make[3]: Leaving directory '/root/ear/src/library/models'
+make[2]: Leaving directory '/root/ear/src/library'
+make[1]: Leaving directory '/root/ear/src'
+make[1]: Entering directory '/root/ear/doc'
+cp -r man /root/ear/bin/
+make[1]: Leaving directory '/root/ear/doc'
+make[1]: Entering directory '/root/ear/etc'
+====================================
+= Installing etc
+====================================
+make[1]: Leaving directory '/root/ear/etc'
+make[1]: Entering directory '/root/ear/src'
+====================================
+= Compiling common
+====================================
+make[2]: Entering directory '/root/ear/src/common'
+make[3]: Entering directory '/root/ear/src/common/config'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/config'
+make[3]: Entering directory '/root/ear/src/common/database'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/database'
+make[3]: Entering directory '/root/ear/src/common/hardware'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/hardware'
+make[3]: Entering directory '/root/ear/src/common/messaging'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/messaging'
+make[3]: Entering directory '/root/ear/src/common/system'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/system'
+make[3]: Entering directory '/root/ear/src/common/types'
+make[4]: Entering directory '/root/ear/src/common/types/configuration'
+make[4]: 'etc.install' is up to date.
+make[4]: Leaving directory '/root/ear/src/common/types/configuration'
+make[3]: Leaving directory '/root/ear/src/common/types'
+make[3]: Entering directory '/root/ear/src/common/utils'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/common/utils'
+make[2]: Leaving directory '/root/ear/src/common'
+====================================
+= Compiling report
+====================================
+make[2]: Entering directory '/root/ear/src/report'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/report'
+====================================
+= Compiling metrics
+====================================
+make[2]: Entering directory '/root/ear/src/metrics'
+make[3]: Entering directory '/root/ear/src/metrics/accumulators'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/accumulators'
+make[3]: Entering directory '/root/ear/src/metrics/bandwidth'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/bandwidth'
+make[3]: Entering directory '/root/ear/src/metrics/cache'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/cache'
+make[3]: Entering directory '/root/ear/src/metrics/common'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/common'
+make[3]: Entering directory '/root/ear/src/metrics/cpi'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/cpi'
+make[3]: Entering directory '/root/ear/src/metrics/energy'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/energy'
+make[3]: Entering directory '/root/ear/src/metrics/flops'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/flops'
+make[3]: Entering directory '/root/ear/src/metrics/frequency'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/frequency'
+make[3]: Entering directory '/root/ear/src/metrics/gpu'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/gpu'
+make[3]: Entering directory '/root/ear/src/metrics/imcfreq'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/imcfreq'
+make[3]: Entering directory '/root/ear/src/metrics/io'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/io'
+make[3]: Entering directory '/root/ear/src/metrics/proc'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/proc'
+make[3]: Entering directory '/root/ear/src/metrics/temperature'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/metrics/temperature'
+make[2]: Leaving directory '/root/ear/src/metrics'
+====================================
+= Compiling management
+====================================
+make[2]: Entering directory '/root/ear/src/management'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/management'
+====================================
+= Compiling daemon
+====================================
+make[2]: Entering directory '/root/ear/src/daemon'
+make[3]: Entering directory '/root/ear/src/daemon/app_api'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/daemon/app_api'
+make[3]: Entering directory '/root/ear/src/daemon/remote_api'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/daemon/remote_api'
+make[3]: Entering directory '/root/ear/src/daemon/local_api'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/daemon/local_api'
+make[3]: Entering directory '/root/ear/src/daemon/powercap'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/daemon/powercap'
+make[3]: Entering directory '/root/ear/src/daemon/gpu'
+make[3]: 'etc.install' is up to date.
+make[3]: Leaving directory '/root/ear/src/daemon/gpu'
+make[2]: Leaving directory '/root/ear/src/daemon'
+====================================
+= Compiling library
+====================================
+make[2]: Entering directory '/root/ear/src/library'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/library'
+====================================
+= Compiling commands
+====================================
+make[2]: Entering directory '/root/ear/src/commands'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/commands'
+====================================
+= Compiling tools
+====================================
+make[2]: Entering directory '/root/ear/src/tools'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/tools'
+====================================
+= Compiling global_manager
+====================================
+make[2]: Entering directory '/root/ear/src/global_manager'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/global_manager'
+====================================
+= Compiling slurm_plugin
+====================================
+make[2]: Entering directory '/root/ear/src/slurm_plugin'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/slurm_plugin'
+====================================
+= Compiling database_cache
+====================================
+make[2]: Entering directory '/root/ear/src/database_cache'
+make[2]: 'etc.install' is up to date.
+make[2]: Leaving directory '/root/ear/src/database_cache'
+make[1]: Leaving directory '/root/ear/src'

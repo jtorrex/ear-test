@@ -1,0 +1,16 @@
+#%Module
+
+# CTT user environment
+#
+# Author                : Energy Aware Runtime BSC team
+# Created               : Mon  2 Nov 08:26:00 CEST 2017
+#
+
+module-whatis "Enable usage of Energy Aware Runtime"
+
+setenv		EAR_INSTALL_PATH	/root/ear/bin
+setenv		EAR_ETC			/root/ear/bin/etc
+setenv		EAR_TMP			/var/ear
+setenv		EAR_DEFAULT		"on"
+prepend-path	PATH			"/root/ear/bin/bin"
+prepend-path	MANPATH			"/root/ear/bin/man"

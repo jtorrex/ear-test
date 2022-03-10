@@ -1,0 +1,102 @@
+# Features
+# Compiles the MPI EAR library version or non-MPI.
+FEAT_MPI_API  = 1
+# This is automatically generated based on the CPU version detected.
+FEAT_AVX512   = @FEAT_AVX512@
+# Extend the set of files installed.
+FEAT_RESEARCH = 0
+# Enables the installation of GPU optimization policies. If 0, only monitoring is supported.
+FEAT_GPU_OPT  = 1
+# Disables the utilization of virtual PSTATES in AMD and selects OS CPUFreq.
+FEAT_AMD_OSCPUFREQ = 0
+
+# Compilers
+CC           = @CC@
+CC_FLAGS     = @CC_FLAGS@
+MPICC        = @MPICC@
+MPICC_FLAGS  = @MPICC_FLAGS@
+
+# Includes
+MPI_BASE     = @MPI_DIR@
+MPI_CFLAGS   = @MPI_CPPFLAGS@
+MPI_VERSION  = @MPI_VERSION@
+GSL_BASE     = @GSL_DIR@
+GSL_CFLAGS   = @GSL_CPPFLAGS@
+GSL_LDFLAGS  = @GSL_LDFLAGS@ @GSL_LIBS@
+SLURM_BASE   = @SLURM_DIR@
+SLURM_CFLAGS = @SLURM_CPPFLAGS@
+DB_BASE      = @DB_DIR@
+DB_CFLAGS    = @DB_CPPFLAGS@
+DB_LDFLAGS   = @DB_LDFLAGS@ @DB_LIBS@
+CUDA_BASE    = @CUDA_DIR@
+
+# Directories
+ROOTDIR      = $(shell pwd)
+SRCDIR       = $(ROOTDIR)/src
+DESTDIR      = @prefix@
+ETCDIR       = @sysconfdir@
+TMPDIR       = @localstatedir@
+DOCDIR       = @docdir@
+
+# Installation
+CHOWN_USR    = @USER@
+CHOWN_GRP    = @GROUP@
+#CONSTANTS   = -DSEC_KEY=10001 -DSYN_TEST # Define SYN_TEST for external synthetic tests compilation
+CONSTANTS    = -DSEC_KEY=10001
+REPLACE      =
+
+######## EXPORTS
+
+include ./Makefile.exports
+
+######## RULES
+
+.PHONY: check functionals
+
+all:
+	@ $(MAKE) -C 'src' all || exit
+
+full: clean all 
+
+check:
+	@ $(MAKE) -C 'src' check
+
+install:
+	@ $(MAKE) -C 'etc' install || exit
+	@ $(MAKE) -C 'src' install || exit
+
+clean:
+	@ $(MAKE) -C 'src' clean || exit
+
+######## ADDITIONAL RULES
+
+devel.install: install;
+	@ $(MAKE) -C 'etc' devel.install || exit
+	@ $(MAKE) -C 'src' devel.install || exit
+
+etc.install: ;
+	@ $(MAKE) -C 'etc' etc.install || exit
+	@ $(MAKE) -C 'src' etc.install || exit
+
+rpm.install: install;
+	@ $(MAKE) -C 'etc' rpm.install || exit
+
+scripts.install: ;
+	@ $(MAKE) -C 'etc' scripts.install || exit
+
+doc.install: ;
+	@ $(MAKE) -C 'doc' install || exit 
+
+%.build: ;
+	@ $(MAKE) -C 'src' $*.build || exit
+
+%.install: ;
+	@ $(MAKE) -C src $*.install || exit
+
+########
+
+depend:
+	@ $(MAKE) -C 'src' depend || exit
+
+depend-clean:
+	@ $(MAKE) -C 'src' depend-clean || exit

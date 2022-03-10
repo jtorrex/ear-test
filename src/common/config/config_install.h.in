@@ -1,0 +1,44 @@
+/*
+*
+* This program is part of the EAR software.
+*
+* EAR provides a dynamic, transparent and ligth-weigth solution for
+* Energy management. It has been developed in the context of the
+* Barcelona Supercomputing Center (BSC)&Lenovo Collaboration project.
+*
+* Copyright © 2017-present BSC-Lenovo
+* BSC Contact   mailto:ear-support@bsc.es
+* Lenovo contact  mailto:hpchelp@lenovo.com
+*
+* This file is licensed under both the BSD-3 license for individual/non-commercial
+* use and EPL-1.0 license for commercial use. Full text of both licenses can be
+* found in COPYING.BSD and COPYING.EPL files.
+*/
+
+#ifndef CONFIG_INSTALLATION_H
+#define CONFIG_INSTALLATION_H
+
+// General
+#define USE_GPUS            @FEAT_GPUS@
+#define MAX_CPUS_SUPPORTED  256
+#define MAX_SOCKETS_SUPPORTED  4
+#define MAX_GPUS_SUPPORTED  4
+#define EAR_GUI             1 // When defined, activates dynamic traces on EARL.
+
+// Library
+#define FEAT_ONLY_MASTER    0
+#define ONLY_MASTER         (FEAT_ONLY_MASTER || !MPI)
+
+// Database
+#define DB_MYSQL            @DB_MYSQL@
+#define DB_PSQL             @DB_PGSQL@
+#define USE_DB              DB_MYSQL || DB_PSQL
+
+// Others
+#define RELEASE             "@PACKAGE_VERSION@"
+
+// Legacy
+#define EAR_INSTALL_PATH    "@prefix@"
+#define MPI_C_LIB_PATH      "lib/libear"
+
+#endif //CONFIG_INSTALLATION_H
